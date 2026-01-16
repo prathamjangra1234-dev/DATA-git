@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Urvi 💗</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --pink1:#ff5fa2;
+  --pink2:#ff9fd3;
+  --pink3:#ffd6ea;
+}
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background: linear-gradient(180deg,var(--pink1),var(--pink2),var(--pink3));
+  color:white;
+  overflow:hidden;
+}
+
+/* Floating hearts */
+.heart{
+  position:fixed;
+  bottom:-20px;
+  font-size:18px;
+  opacity:0.7;
+  animation: floatUp linear infinite;
+}
+@keyframes floatUp{
+  to{ transform:translateY(-120vh); }
+}
+
+/* Pages */
+.page{
+  display:none;
+  min-height:100vh;
+  padding:90px 10%;
+  animation: fadeSlide 0.8s ease;
+}
+.page.active{
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  text-align:center;
+}
+@keyframes fadeSlide{
+  from{ opacity:0; transform:translateY(30px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+/* Buttons */
+.nav-btns{
+  margin-top:40px;
+}
+button{
+  padding:14px 34px;
+  margin:10px;
+  border:none;
+  border-radius:40px;
+  background:white;
+  color:var(--pink1);
+  font-weight:600;
+  cursor:pointer;
+  box-shadow:0 10px 25px rgba(0,0,0,0.25);
+}
+button:hover{
+  transform:scale(1.05);
+}
+
+/* Photo frame */
+.photo-frame{
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  padding:10px;
+  background:linear-gradient(135deg,#fff,#ffb6d5);
+  margin-bottom:25px;
+}
+.photo-frame img{
+  width:100%;
+  height:100%;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+/* Wishes cards */
+.card{
+  background:rgba(255,255,255,0.2);
+  padding:30px;
+  border-radius:25px;
+  max-width:600px;
+  margin:15px 0;
+  animation: fadeSlide 1s ease;
+}
+
+/* Letter */
+.letter{
+  background:#fff;
+  color:#333;
+  padding:50px;
+  border-radius:20px;
+  max-width:750px;
+  box-shadow:0 40px 80px rgba(0,0,0,0.3);
+  text-align:left;
+  font-family:'Playfair Display',serif;
+}
+.letter h2{
+  color:var(--pink1);
+  margin-bottom:20px;
+}
+.letter p{
+  font-size:1.1rem;
+  line-height:1.8;
+}
+.signature{
+  margin-top:40px;
+  font-family:'Poppins',sans-serif;
+  font-size:1rem;
+}
+</style>
+</head>
+
+<body>
+
+<!-- PAGE 1 -->
+<div class="page active" id="p1">
+  <div class="photo-frame">
+   <img src="C:\Users\PRATHAM\AppData\Local\Temp\Rar$DIa6336.39497.rartemp\image - Copy.jpg" style="border:5px solid red;">
+
+  </div>
+  <h1>Happy Birthday, Urvi 🎂💗</h1>
+  <p>A little extra effort just for you.</p>
+
+  <div class="nav-btns">
+    <button onclick="goTo(2)">Next →</button>
+  </div>
+</div>
+
+<!-- PAGE 2 -->
+<div class="page" id="p2">
+  <h1>Birthday Wishes 🌸</h1>
+
+  <div class="card">💗 May your days be filled with calm happiness.</div>
+  <div class="card">✨ May confidence follow you everywhere.</div>
+  <div class="card">🌸 May you always believe in yourself.</div>
+
+  <div class="nav-btns">
+    <button onclick="goTo(1)">← Back</button>
+    <button onclick="goTo(3)">Next →</button>
+  </div>
+</div>
+
+<!-- PAGE 3 -->
+<div class="page" id="p3">
+  <h1>Some Thoughts ✨</h1>
+
+  <div class="card">
+    Some people make spaces warmer without trying.
+    You are one of them.
+  </div>
+  <div class="card">
+    Your presence matters more than you realize.
+  </div>
+
+  <div class="nav-btns">
+    <button onclick="goTo(2)">← Back</button>
+    <button onclick="goTo(4)">Next →</button>
+  </div>
+</div>
+
+<!-- PAGE 4 -->
+<div class="page" id="p4">
+  <div class="letter">
+    <h2>Dear Urvi,</h2>
+    <p>
+
+I wanted to do something more than just say “Happy Birthday,”
+because some people deserve a little extra effort — and you are one of them.
+
+Your presence makes things feel lighter, and your smile has a quiet magic.
+I hope this year brings you peace, growth, and everything your heart has been waiting for.
+
+Never forget how valuable you are, even on days when you doubt it.
+You matter more than you know.
+
+Happy Birthday 💗
+
+    </p>
+
+    <div class="signature">
+      — FROM PRATHAM✨
+    </div>
+  </div>
+
+  <div class="nav-btns">
+    <button onclick="goTo(3)">← Back</button>
+  </div>
+</div>
+
+<script>
+/* Page navigation */
+function goTo(n){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('p'+n).classList.add('active');
+}
+
+/* Floating hearts */
+function heart(){
+  const h=document.createElement("div");
+  h.className="heart";
+  h.innerHTML="💗";
+  h.style.left=Math.random()*100+"vw";
+  h.style.fontSize=(Math.random()*18+12)+"px";
+  h.style.animationDuration=(Math.random()*4+6)+"s";
+  document.body.appendChild(h);
+  setTimeout(()=>h.remove(),10000);
+}
+setInterval(heart,350);
+</script>
+
+</body>
+</html>

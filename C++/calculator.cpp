@@ -4,7 +4,6 @@ using namespace std;
 int main() {
     double num1, num2;
     char op;
-
     cout << "Enter first number: ";
     cin >> num1;
 
