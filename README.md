@@ -8,7 +8,7 @@
 
 ## 📌 About Me
 
-Hi, I'm **Pratham**, a passionate **BCA 2nd Year student** with strong interest in programming and web development.
+Hi, I'm **Pratham**, a passionate **BCA 1st Year student** with strong interest in programming and web development.
 
 * 💻 Strong foundation in **C and C++**
 * 🌐 Advanced knowledge in **HTML & CSS**
