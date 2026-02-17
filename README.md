@@ -2,7 +2,7 @@
 
 # 🚀 Multi-Language Academic Project
 
-### 👨‍💻 By Pratham | BCA 2nd Year
+### 👨‍💻 By Pratham | BCA 1st Year
 
 ---
 
